@@ -15,7 +15,7 @@ public class DateServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
         req.setAttribute("date", new Date());
         req.getServletContext()
-                .getRequestDispatcher("/date2.jsp")
+                .getRequestDispatcher("/WEB-INF/date2.jsp")
                 .forward(req, resp);
     }
 }
