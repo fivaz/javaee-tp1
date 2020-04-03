@@ -7,7 +7,7 @@
 
     <servlet>
         <servlet-name>SysoutServlet</servlet-name>
-        <servlet-class>ch.hesge.programmation.SysoutServlet</servlet-class>
+        <servlet-class>ch.hesge.programmation.servlets.SysoutServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>SysoutServlet</servlet-name>

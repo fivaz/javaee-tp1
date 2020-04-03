@@ -1,4 +1,4 @@
-package ch.hesge.programmation;
+package ch.hesge.programmation.servlets;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
