@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
-@WebServlet(urlPatterns = "/home")
+@WebServlet(urlPatterns = "/auth")
 public class AuthenticationServlet extends HttpServlet {
 
 
