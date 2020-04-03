@@ -12,6 +12,13 @@
     <title>Title</title>
 </head>
 <body>
+<form method="POST" action="<%= request.getContextPath() %>/people">
+    <label for="firstName">Prénom :</label>
+    <input type="text" id="firstName" name="firstName"/>
+    <label for="lastName">Nom :</label>
+    <input type="text" id="lastName" name="lastName">
+    <input type="submit" value="Enregistrer">
+</form>
 <% List<Person> people = (List<Person>) request.getAttribute("people"); %>
 <% if (people != null) { %>
 <table>
