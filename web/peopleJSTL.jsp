@@ -1,5 +1,7 @@
+<%@ page contentType="text/html;charset=UTF-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<fmt:setBundle basename="messages"/>
 <%--
   Created by IntelliJ IDEA.
   User: Fivaz
@@ -8,27 +10,27 @@
   To change this template use File | Settings | File Templates.
 --%>
 <c:url value="/people" var="linkServletPeople"/>
-<%@ page contentType="text/html;charset=UTF-8" %>
+
 <html>
 <head>
-    <title>Title</title>
+    <title><fmt:message key="label.people"/></title>
 </head>
 <body>
 
 <form method="POST" action="${linkServletPeople}">
-    <label for="firstName">Prénom :</label>
+    <label for="firstName"><fmt:message key="label.firstName"/> :</label>
     <input type="text" id="firstName" name="firstName"/>
-    <label for="lastName">Nom :</label>
+    <label for="lastName"><fmt:message key="label.lastName"/> :</label>
     <input type="text" id="lastName" name="lastName">
-    <input type="submit" value="Enregistrer">
+    <input type="submit" value="<fmt:message key="label.submit"/>">
 </form>
 <c:if test="${not empty people}">
     <table border="2">
         <thead>
         <tr>
-            <th>Prénom :</th>
-            <th>Nom :</th>
-            <th>Date :</th>
+            <th><fmt:message key="label.firstName"/> :</th>
+            <th><fmt:message key="label.lastName"/> :</th>
+            <th><fmt:message key="label.date"/> :</th>
         </tr>
         </thead>
         <tbody>
