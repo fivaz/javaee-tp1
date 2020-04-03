@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.Date;
 
 @WebServlet("/person/*")
 public class PersonServlet extends HttpServlet {
@@ -16,7 +17,7 @@ public class PersonServlet extends HttpServlet {
     public void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
         String firstName = req.getParameter("firstName");
         String lastName = req.getParameter("lastName");
-        Person person = new Person(firstName, lastName);
+        Person person = new Person(firstName, lastName, new Date());
         req.setAttribute("person", person);
 
         String folder = "/WEB-INF/";

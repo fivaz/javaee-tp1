@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.Date;
 import java.util.List;
 
 @WebServlet(urlPatterns = "/people")
@@ -30,7 +31,7 @@ public class PeopleServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String firstName = req.getParameter("firstName");
         String lastName = req.getParameter("lastName");
-        Person person = new Person(firstName, lastName);
+        Person person = new Person(firstName, lastName, new Date());
 
         BDD bdd = new BDD();
         List<Person> people = bdd.getPeople();

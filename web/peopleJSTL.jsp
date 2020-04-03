@@ -1,4 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%--
   Created by IntelliJ IDEA.
   User: Fivaz
@@ -27,6 +28,7 @@
         <tr>
             <th>Prénom :</th>
             <th>Nom :</th>
+            <th>Date :</th>
         </tr>
         </thead>
         <tbody>
@@ -34,6 +36,7 @@
             <tr>
                 <td>${person.getFirstName()}</td>
                 <td>${person.getLastName()}</td>
+                <td><fmt:formatDate value="${person.getDate()}" pattern="dd.MM.yyyy hh:mm"/></td>
             </tr>
         </c:forEach>
         </tbody>
