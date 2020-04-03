@@ -7,13 +7,15 @@
   Time: 14:00
   To change this template use File | Settings | File Templates.
 --%>
+<c:url value="/people" var="linkServletPeople"/>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
     <title>Title</title>
 </head>
 <body>
-<form method="POST" action="${pageContext.request.contextPath}/people">
+
+<form method="POST" action="${linkServletPeople}">
     <label for="firstName">Prénom :</label>
     <input type="text" id="firstName" name="firstName"/>
     <label for="lastName">Nom :</label>
