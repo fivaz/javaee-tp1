@@ -11,6 +11,7 @@
     <title>Welcome</title>
 </head>
 <body>
-<h1>Welcome you're logged</h1>
+<h1>Welcome you're logged as <%=session.getAttribute("auth")%>
+</h1>
 </body>
 </html>
