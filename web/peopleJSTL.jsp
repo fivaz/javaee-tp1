@@ -1,8 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
-<fmt:setLocale value="fr"/>
-<fmt:setBundle basename="messages"/>
 <%--
   Created by IntelliJ IDEA.
   User: Fivaz
@@ -12,7 +10,10 @@
 --%>
 <c:url value="/people" var="linkServletPeople"/>
 
-<html>
+<fmt:setLocale value="${param.lang}"/>
+<fmt:setBundle basename="messages"/>
+
+<html lang="${param.lang}">
 <head>
     <title><fmt:message key="label.people"/></title>
 </head>
