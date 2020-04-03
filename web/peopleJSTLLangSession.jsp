@@ -10,10 +10,10 @@
 --%>
 <c:url value="/people" var="linkServletPeople"/>
 
-<fmt:setLocale value="${param.lang}"/>
+<fmt:setLocale value="${sessionScope.lang}"/>
 <fmt:setBundle basename="messages"/>
 
-<html lang="${param.lang}">
+<html lang="${sessionScope.lang}">
 <head>
     <title><fmt:message key="label.people"/></title>
 </head>
