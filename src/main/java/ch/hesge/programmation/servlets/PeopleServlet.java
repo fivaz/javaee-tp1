@@ -14,13 +14,16 @@ import java.util.List;
 @WebServlet(urlPatterns = "/people")
 public class PeopleServlet extends HttpServlet {
 
+    //    private static String view = "/peopleJSP.jsp";
+    private static String view = "/peopleJSTL.jsp";
+
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         BDD bdd = new BDD();
         List<Person> people = bdd.getPeople();
 
         req.setAttribute("people", people);
-        req.getRequestDispatcher("/people.jsp").forward(req, resp);
+        req.getRequestDispatcher(view).forward(req, resp);
     }
 
     @Override
@@ -34,6 +37,6 @@ public class PeopleServlet extends HttpServlet {
         people.add(person);
 
         req.setAttribute("people", people);
-        req.getRequestDispatcher("/people.jsp").forward(req, resp);
+        req.getRequestDispatcher(view).forward(req, resp);
     }
 }
