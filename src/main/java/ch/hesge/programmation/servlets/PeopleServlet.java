@@ -16,7 +16,7 @@ import java.util.List;
 public class PeopleServlet extends HttpServlet {
 
     //    private static String view = "/peopleJSP.jsp";
-//    private static String view = "/peopleJSTL.jsp";
+    //    private static String view = "/peopleJSTL.jsp";
     private static String view = "/peopleJSTLLangSession.jsp";
 
     @Override
